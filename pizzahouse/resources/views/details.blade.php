@@ -3,9 +3,8 @@
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
         <div class="content">
             <div class="title m-b-md">
-                Pizza list {{ $id }}
+                <p>Pizza list {{ $id }}</p>
             </div>
         </div>
-    </div>
     </div>
 @endsection

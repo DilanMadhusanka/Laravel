@@ -8,17 +8,17 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
-<body class="antialiased">
+<body>
     @yield('content')
-    
     <footer>
         Copyright 2020 Pizza House
     </footer>
 </body>
+
 </html>
