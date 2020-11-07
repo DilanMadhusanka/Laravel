@@ -4,23 +4,9 @@
         <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
             <h1 style="color: white;">Pizza House</h1>
         </div>
-        <div>
-            @unless($base == 'crust')
-                <p>You don't have cheesy crust!</p>
-            @endunless
-            @php
-            $name = 'Shaun';
-            echo($name)
-            @endphp
-        </div>
-        <div>
-            @for ($i = 0; $i < count($pizza2); $i++)
-                <p>{{ $pizza2[$i]['type'] }}</p>
-            @endfor
-        </div>
-        @foreach ($pizza2 as $pizza)
+        @foreach ($pizzas as $pizza)
             <ul>
-                <li>{{ $loop->index + 1 }} => {{ $pizza['catog'] }}</li>
+                <li>{{ $loop->index + 1 }} => {{ $pizza->name }} - {{$pizza->type}} - {{$pizza->base}}</li>
             </ul>
         @endforeach
     </div>
