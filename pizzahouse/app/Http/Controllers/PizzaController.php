@@ -8,9 +8,9 @@ use App\Pizza;
 class PizzaController extends Controller
 {
     public function index() {
-        // $pizzas = Pizza::all();
+        $pizzas = Pizza::all();
         // $pizzas = Pizza::orderBy('name', 'desc')->get();
-        $pizzas = Pizza::where('type', 'hawain')->get();
+        // $pizzas = Pizza::where('type', 'hawaiian')->get();
         // $pizzas = Pizza::latest()->get();
 
         return view('pizzas.index', ['pizzas' => $pizzas]);
@@ -32,6 +32,7 @@ class PizzaController extends Controller
         $pizza->name = request('name');
         $pizza->type = request('type');
         $pizza->base = request('base');
+        $pizza->toppings = request('toppings');
         
         $pizza->save();
 
